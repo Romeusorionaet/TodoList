@@ -1,0 +1,21 @@
+.task {
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--gray-100);
+    height: 7.2rem;
+}
+
+.task .text, .textChecked {
+    width: 100%;
+    padding: 0 1rem;
+
+} 
+
+.task .textChecked {
+    text-decoration: line-through;
+    opacity: .8;
+}
