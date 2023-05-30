@@ -3,8 +3,6 @@
 <br>
 
 >📃 Bem-vindo ao nosso incrível projeto de Lista de Tarefas Diárias! Prepare-se para descobrir a solução perfeita para um problema comum: esquecermos das pequenas tarefas do dia a dia quando não as anotamos.
-<br>
-<br>
 Com a nossa poderosa e intuitiva Lista de Tarefas Diárias, você terá a ferramenta ideal para manter-se organizado e nunca mais deixar escapar aquelas tarefas importantes. Esqueceu de pegar leite no mercado? Não consegue lembrar do compromisso marcado para a tarde? Não se preocupe! Nosso projeto é o seu parceiro confiável para ajudá-lo a registrar e acompanhar todas as suas tarefas.
 
 <br>
