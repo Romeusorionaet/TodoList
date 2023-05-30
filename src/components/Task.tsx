@@ -1,6 +1,7 @@
-import styles from './Task.module.css'
 import { useState, MouseEvent } from 'react'
 import { BsCheckCircleFill, BsCircle, BsFillTrashFill } from 'react-icons/bs'
+
+import styles from './Task.module.css'
 
 interface TaskProps {
     id: string;
@@ -11,12 +12,12 @@ interface TaskProps {
 }
 
 export function Task({ id, text, isComplete, onDeleteTask, onCheck }: TaskProps) {
-    const [checkCurrent, setCheckCurrent] = useState<boolean>(isComplete)
+    const [ checkCurrent, setCheckCurrent ] = useState<boolean>(isComplete)
 
     function handleDeleteTask() {
         onDeleteTask(id)
     }
-
+    
     function handleCheckbox(event: MouseEvent<HTMLButtonElement>) {
         if(event.type === 'click') {
             if(checkCurrent === false){
@@ -32,7 +33,7 @@ export function Task({ id, text, isComplete, onDeleteTask, onCheck }: TaskProps)
     return(
         <div className={styles.task}>
             <button 
-            className={isComplete ? styles.active : undefined}
+            className={isComplete ? styles.active : ''}
             onClick={handleCheckbox}
             >
                 {isComplete ? <BsCheckCircleFill size={20} /> : <BsCircle size={20} />}

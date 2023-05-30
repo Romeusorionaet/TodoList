@@ -1,6 +1,4 @@
 .task_control {
-    //border-bottom: 1px solid var(--gray-100);  
-    
     display: flex;
     justify-content: space-evenly;
 

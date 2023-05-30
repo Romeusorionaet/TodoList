@@ -1,7 +1,9 @@
 import { FaClipboardList } from 'react-icons/fa'
-import styles from './Main.module.css'
+
 import { Task } from './Task'
 import { TaskCount, TasksProps } from './TaskCount'
+
+import styles from './Main.module.css'
 
 interface TaskState {
     tasks: TasksProps[];
@@ -15,7 +17,9 @@ export function Main({ tasks, setTasks }: TaskState ) {
             return task.id !== taskToDelete
         })
         setTasks(tasksWithoutDeleteOne)
-        localStorage.setItem('@saveTodoTasksIgnite', JSON.stringify(tasksWithoutDeleteOne))
+
+        localStorage.setItem('@saveTodoTasksIgnite', 
+        JSON.stringify(tasksWithoutDeleteOne))
     }
 
     function onCheck(id: string) {
@@ -36,11 +40,11 @@ export function Main({ tasks, setTasks }: TaskState ) {
         <main>
             <TaskCount newTask={tasks} />
 
-            <div className={tasks.length !== 0 ? undefined : styles.line}></div>
+            <div className={tasks.length !== 0 ? '' : styles.line}></div>
 
             {tasks.length !== 0 ?
                 <div className={styles.tasks}>
-                    {tasks.reverse().map(task => {
+                    {tasks.map(task => {
                         return(
                             <Task
                             key={task.id}

@@ -11,7 +11,7 @@ main .tasks {
     padding: 2.4rem 2rem;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 1.2rem;
 }

@@ -46,7 +46,6 @@ export function App() {
       />
       
       <Main tasks={tasks} setTasks={setTasks} />
-
     </div>
   )
 }

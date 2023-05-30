@@ -5,10 +5,14 @@
     display: flex;
 
     background: var(--gray-100);
+    font-size: 1.4rem;
 
     width: 100%;
     animation: comingFromAbove ease 1s;
+}
 
+.task_fade_out {
+    animation: taskFadeOut ease 2s;
 }
 
 .task .text, .textChecked {
@@ -58,7 +62,16 @@
 
 @keyframes comingFromAbove {
     0% {
-        transform: translateY(-480%);
+        transform: translateY(-385%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes taskFadeOut {
+    0% {
+        transform: translateY(385%);
     }
     100% {
         transform: translateY(0);
