@@ -1,4 +1,4 @@
-<h1> Todo List </h1>
+<h1 align='center'> Todo List </h1>
 
 <br>
 
@@ -9,9 +9,17 @@ Com a nossa poderosa e intuitiva Lista de Tarefas Diárias, você terá a ferram
 
 <br>
 
+<div align='center'>
+
 ![preview](./src/assets/previewMobileTodoList.png)
 
+</div>
+
+<div align='center'>
+
 [😀=> Todo <=😀](https://todo-list-murex-iota.vercel.app)
+
+</div>
 
 <br>
 
@@ -48,7 +56,7 @@ Com a nossa poderosa e intuitiva Lista de Tarefas Diárias, você terá a ferram
 <br>
 <hr>
 
-<h2> Meus contatos </h2>
+<h2 align='center'> Meus contatos </h2>
 
 * [LinkedIn](https://www.linkedin.com/in/romeu-soares-87749a231/)
 
