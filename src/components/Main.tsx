@@ -40,18 +40,18 @@ export function Main({ tasks, setTasks }: TaskState ) {
 
             {tasks.length !== 0 ?
                 <div className={styles.tasks}>
-                {tasks.map(task => {
-                    return(
-                        <Task
-                        key={task.id}
-                        id={task.id}
-                        text={task.text}
-                        isComplete={task.isComplete}
-                        onDeleteTask={deleteTask}
-                        onCheck={onCheck}
-                        />
-                    )
-                })}
+                    {tasks.reverse().map(task => {
+                        return(
+                            <Task
+                            key={task.id}
+                            id={task.id}
+                            text={task.text}
+                            isComplete={task.isComplete}
+                            onDeleteTask={deleteTask}
+                            onCheck={onCheck}
+                            />
+                        )
+                    })}
                 </div>
                 : 
                 <div className={styles.empty_field}>
