@@ -1,8 +1,30 @@
 .task_control {
-    border-bottom: 1px solid var(--gray-100);  
+    //border-bottom: 1px solid var(--gray-100);  
     
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
-    padding: 2rem;
+    padding: 2.5rem;
+    margin-top: 6.5rem;
+}
+
+.task_control p {
+    color: var(--blue-100);
+}
+
+.task_control p span {
+    color: var(--white-500);
+    background: var(--gray-100);
+
+    padding: .5rem;
+    margin-left: .5rem;
+
+    border-radius: 1rem 5%;
+}
+
+@media (max-width: 800px) {
+    .task_control {
+        justify-content: space-around;
+        padding: 2.5rem 0;
+    }
 }

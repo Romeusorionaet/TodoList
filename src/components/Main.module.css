@@ -1,0 +1,39 @@
+main .line {
+    background: var(--gray-100);
+
+    height: .1rem;
+    width: 45%;
+
+    margin: 0 auto;
+}
+
+main .tasks {
+    padding: 2.4rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+main .empty_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 6.4rem;
+    color: var(--gray-500);
+}
+
+main .empty_field svg {
+    color: var(--gray-100);
+    font-size: 8rem;
+
+    margin-bottom: 1.6rem;
+}
+
+@media (max-width: 800px) {
+    main .line {
+        width: 80%;
+    }
+}

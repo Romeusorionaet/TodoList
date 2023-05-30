@@ -1,16 +1,16 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
-import logoTodo from './assets/logoTodo.svg'
-import styles from './App.module.css'
 import { Main } from './components/Main'
 import { TasksProps } from './components/TaskCount';
+import { Header } from './components/Header';
+import { Form } from './components/Form';
 
 export function App() {
   const [ tasks, setTasks ] = useState<TasksProps[]>(() => {
-      const localTasks = localStorage.getItem('@saveTodoTasksIgnite')
-      if(localTasks) {
-          return JSON.parse(localTasks)
+      const localTasksSave = localStorage.getItem('@saveTodoTasksIgnite')
+      if(localTasksSave) {
+          return JSON.parse(localTasksSave)
       }else{
           return []
       }
@@ -18,7 +18,7 @@ export function App() {
 
   const [ newTask, setNewTask ] = useState('')
 
-  function handleTask(event: ChangeEvent<HTMLInputElement>) {
+  function handleTask( event: ChangeEvent<HTMLInputElement> ) {
     setNewTask(event.target.value)
   }
 
@@ -37,15 +37,13 @@ export function App() {
 
   return (
     <div>
+      <Header />
 
-      <div className={styles.header}>
-        <img src={logoTodo} alt='logo todo' />
-      </div>
-
-      <form onSubmit={handleNewTask}>
-        <input value={newTask} required type='text' onChange={handleTask}/>
-        <button type='submit'>Criar</button>
-      </form>
+      <Form 
+      handleTask={handleTask}
+      handleNewTask={handleNewTask}
+      newTask={newTask}
+      />
       
       <Main tasks={tasks} setTasks={setTasks} />
 

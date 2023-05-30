@@ -13,15 +13,15 @@ interface PropsCount {
 export function TaskCount( { newTask }: PropsCount ) {
 
     const taskCompleted  = newTask.reduce((accumulator, task) => {
-        localStorage.setItem('@saveTodoTasksIgnite', JSON.stringify(newTask))
-        
-        if (task.isComplete) {
-            return accumulator + 1;
-          } else {
-            return accumulator;
-          }
-          
-        }, 0)
+      localStorage.setItem('@saveTodoTasksIgnite', JSON.stringify(newTask))
+
+      if (task.isComplete) {
+        return accumulator + 1;
+      } else {
+        return accumulator;
+      }
+      
+    }, 0)
         
     return(
         <div className={styles.task_control}>

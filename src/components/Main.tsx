@@ -1,3 +1,5 @@
+import { FaClipboardList } from 'react-icons/fa'
+import styles from './Main.module.css'
 import { Task } from './Task'
 import { TaskCount, TasksProps } from './TaskCount'
 
@@ -13,6 +15,7 @@ export function Main({ tasks, setTasks }: TaskState ) {
             return task.id !== taskToDelete
         })
         setTasks(tasksWithoutDeleteOne)
+        localStorage.setItem('@saveTodoTasksIgnite', JSON.stringify(tasksWithoutDeleteOne))
     }
 
     function onCheck(id: string) {
@@ -32,25 +35,30 @@ export function Main({ tasks, setTasks }: TaskState ) {
     return(
         <main>
             <TaskCount newTask={tasks} />
-            {
-                tasks.length !== 0 ?
-                <>
-                    {tasks.map(task => {
-                        return(
-                            <Task
-                            key={task.id}
-                            id={task.id}
-                            text={task.text}
-                            isComplete={task.isComplete}
-                            onDeleteTask={deleteTask}
-                            onCheck={onCheck}
-                            />
-                        )
-                    })}
 
-                </>
+            <div className={tasks.length !== 0 ? undefined : styles.line}></div>
+
+            {tasks.length !== 0 ?
+                <div className={styles.tasks}>
+                {tasks.map(task => {
+                    return(
+                        <Task
+                        key={task.id}
+                        id={task.id}
+                        text={task.text}
+                        isComplete={task.isComplete}
+                        onDeleteTask={deleteTask}
+                        onCheck={onCheck}
+                        />
+                    )
+                })}
+                </div>
                 : 
-                <p>clean</p>
+                <div className={styles.empty_field}>
+                    <FaClipboardList />
+                    <strong>Você ainda não tem tarefas cadastradas</strong>
+                    <p>Crie tarefas e organize seus itens a fazer</p>
+                </div>
             }
         </main>
     )

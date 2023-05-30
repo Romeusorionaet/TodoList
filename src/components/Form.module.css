@@ -1,0 +1,44 @@
+form {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+
+    margin-top: -3rem;
+}
+
+form input {
+    background: var(--gray-100);
+    color: var(--white-500);
+
+    font-size: 1.6rem;
+
+    border: none;
+
+    width: 50%;
+    height: 5.4rem;
+
+    padding: 1.6rem;
+    border-radius: 1rem;
+}
+
+/* form .input:focus {
+    color: red;
+} */
+
+form button {
+    background: var(--blue-500);
+    color: var(--white);
+
+    border: none;
+    border-radius: 1rem;
+
+    width: 9rem;
+}
+
+@media (max-width: 800px) {
+    form input {
+        width: 65%;
+    }
+}
